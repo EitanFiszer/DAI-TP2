@@ -48,9 +48,9 @@ export class PeliculaService {
         if(titulo && order){
             query=`SELECT * from ${peliculaTabla} WHERE Titulo LIKE %@Titulo% ORDER by Peliculas.Fecha ${order}`
         }else if(titulo){
-            	query=`SELECT * from ${peliculaTabla} WHERE Titulo=@Titulo`
+        	query=`SELECT * from ${peliculaTabla} WHERE Titulo=@Titulo`
         }else if(order){
-            	query=`SELECT * from ${peliculaTabla} ORDER BY Peliculas.Fecha ${order}`
+            query=`SELECT * from ${peliculaTabla} ORDER BY Peliculas.Fecha ${order}`
         }else{
             query=`SELECT * from ${peliculaTabla}`;
         }
@@ -63,15 +63,14 @@ export class PeliculaService {
     getMovieById = async (id) => {
         console.log('This is a function on the service');
 
-        const pool = await sql.connect(config);
-        const response = await pool.request()
-            .input('Id',sql.Int, id)
-            .query(`SELECT p.* from ${peliculaXpersonajeTabla} pp, ${personajeTabla} p where pp.Id_pelicula=@Id and pp.Id_personaje=p.Id`);
-        const pelicula = await pool.request()
-            .input('Id',sql.Int, id)
-            .query(`SELECT * from ${peliculaTabla} WHERE Id=@Id`);
+        let response
+        let query=`SELECT p.* from ${peliculaXpersonajeTabla} pp, ${personajeTabla} p where pp.Id_pelicula=@Id and pp.Id_personaje=p.Id`
+        response=await dbHelper(id,undefined,query)
+        let pelicula
+        let query2=`SELECT * from ${peliculaTabla} WHERE Id=@Id` 
+        pelicula=await dbHelper(id,undefined,query2)
 
-            pelicula.recordset[0].characters=response.recordset;
+        pelicula.recordset[0].characters=response.recordset;
 
         console.log(response)
 

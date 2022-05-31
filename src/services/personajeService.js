@@ -18,7 +18,7 @@ export class PersonajeService {
         }if(edad){
             solicitud+=` and Edad=@Edad`;
         }if(id_movie){
-            solicitud+=` and pp.Id_pelicula=@Id `; 
+            solicitud+=` and pp.Id_pelicula=@Id_movie `; 
         }if(peso){
             solicitud+=` and Peso=@Peso `;
         }
@@ -62,13 +62,12 @@ export class PersonajeService {
     getCharacterById = async (id) => {
         console.log('This is a function on the service');
 
-        const pool = await sql.connect(config);
-        const response = await pool.request()
-            .input('Id',sql.Int, id)
-            .query(`SELECT m.* from ${peliculaXpersonajeTabla} pp, ${peliculaTabla} m where pp.Id_personaje=@Id and pp.Id_pelicula=m.Id`);
-        const personaje = await pool.request()
-            .input('Id',sql.Int, id)
-            .query(`SELECT * from ${personajeTabla} WHERE Id=@Id`);
+        let response
+        let query=`SELECT m.* from ${peliculaXpersonajeTabla} pp, ${peliculaTabla} m where pp.Id_personaje=@Id and pp.Id_pelicula=m.Id`;
+        response=await dbHelper(id,undefined,query)
+        let personaje
+        let query2=`SELECT * from ${personajeTabla} WHERE Id=@Id`;
+        personaje=await dbHelper(id,undefined,query2)
 
             personaje.recordset[0].movies=response.recordset;
 

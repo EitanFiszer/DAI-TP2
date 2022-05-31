@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "ee1f4428-9b9c-4ed0-8d9d-85ce9661e1ba",
+		"name": "DAI-TP2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{url}}/auth/logIn",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoicGxheWxvYWQgbnVlc3RybyIsInVzZXJFbWFpbCI6Ik9KVkR6a1BrUGlDeTNmakp3Y0BleGFtcGxlLmNvbSIsImlhdCI6MTY1Mzk5NzkzMywiZXhwIjoxNjU0MDMyNDkzLCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdC8iXSwiaXNzIjoiaHR0cDovL3BlcnNvbmFqZXNFRy5vcnQvIiwic3ViIjoiT0pWRHprUGtQaUN5M2ZqSndjIn0.-EP6ZpWyip6epTHi1Y9ho8kmIbtJgJ8bynJXxvAdqjM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/auth/logIn",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"logIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/characters",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoicGxheWxvYWQgbnVlc3RybyIsInVzZXJFbWFpbCI6Ik9KVkR6a1BrUGlDeTNmakp3Y0BleGFtcGxlLmNvbSIsImlhdCI6MTY1Mzk5NzkzMywiZXhwIjoxNjU0MDMyNDkzLCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdC8iXSwiaXNzIjoiaHR0cDovL3BlcnNvbmFqZXNFRy5vcnQvIiwic3ViIjoiT0pWRHprUGtQaUN5M2ZqSndjIn0.-EP6ZpWyip6epTHi1Y9ho8kmIbtJgJ8bynJXxvAdqjM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/characters",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/characters",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoicGxheWxvYWQgbnVlc3RybyIsInVzZXJFbWFpbCI6Ikx1cXRUWnp2NWx0NTU2NkJ2NkBleGFtcGxlLmNvbSIsImlhdCI6MTY1Mzk5ODI1NSwiZXhwIjoxNjU0MDMyODE1LCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdC8iXSwiaXNzIjoiaHR0cDovL3BlcnNvbmFqZXNFRy5vcnQvIiwic3ViIjoiTHVxdFRaenY1bHQ1NTY2QnY2In0.VAna5oViw_EpfBAhNpo-T7qlwe6IuYGj5n3j1DBGlkM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\":\"1\",\r\n    \"nombre\":\"1\",\r\n    \"edad\":1,\r\n    \"peso\":1,\r\n    \"historia\":\"1\",\r\n    \"nacimiento\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/characters",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/characters/8",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoicGxheWxvYWQgbnVlc3RybyIsInVzZXJFbWFpbCI6Ikx1cXRUWnp2NWx0NTU2NkJ2NkBleGFtcGxlLmNvbSIsImlhdCI6MTY1Mzk5ODI1NSwiZXhwIjoxNjU0MDMyODE1LCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdC8iXSwiaXNzIjoiaHR0cDovL3BlcnNvbmFqZXNFRy5vcnQvIiwic3ViIjoiTHVxdFRaenY1bHQ1NTY2QnY2In0.VAna5oViw_EpfBAhNpo-T7qlwe6IuYGj5n3j1DBGlkM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\":\"3\",\r\n    \"nombre\":\"eitan\",\r\n    \"edad\":1,\r\n    \"peso\":1,\r\n    \"historia\":\"1\",\r\n    \"nacimiento\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/characters/8",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"characters",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/characters/8",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoicGxheWxvYWQgbnVlc3RybyIsInVzZXJFbWFpbCI6Ikx1cXRUWnp2NWx0NTU2NkJ2NkBleGFtcGxlLmNvbSIsImlhdCI6MTY1Mzk5ODI1NSwiZXhwIjoxNjU0MDMyODE1LCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdC8iXSwiaXNzIjoiaHR0cDovL3BlcnNvbmFqZXNFRy5vcnQvIiwic3ViIjoiTHVxdFRaenY1bHQ1NTY2QnY2In0.VAna5oViw_EpfBAhNpo-T7qlwe6IuYGj5n3j1DBGlkM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/characters/8",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"characters",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/characters/1?nombre=Raúl",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoicGxheWxvYWQgbnVlc3RybyIsInVzZXJFbWFpbCI6Ikx1cXRUWnp2NWx0NTU2NkJ2NkBleGFtcGxlLmNvbSIsImlhdCI6MTY1Mzk5ODI1NSwiZXhwIjoxNjU0MDMyODE1LCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdC8iXSwiaXNzIjoiaHR0cDovL3BlcnNvbmFqZXNFRy5vcnQvIiwic3ViIjoiTHVxdFRaenY1bHQ1NTY2QnY2In0.VAna5oViw_EpfBAhNpo-T7qlwe6IuYGj5n3j1DBGlkM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/characters/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"characters",
+						"1"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "Raúl",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "edad",
+							"value": "15",
+							"disabled": true
+						},
+						{
+							"key": "peso",
+							"value": "50",
+							"disabled": true
+						},
+						{
+							"key": "id_movie",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoicGxheWxvYWQgbnVlc3RybyIsInVzZXJFbWFpbCI6Ikx1cXRUWnp2NWx0NTU2NkJ2NkBleGFtcGxlLmNvbSIsImlhdCI6MTY1Mzk5ODI1NSwiZXhwIjoxNjU0MDMyODE1LCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdC8iXSwiaXNzIjoiaHR0cDovL3BlcnNvbmFqZXNFRy5vcnQvIiwic3ViIjoiTHVxdFRaenY1bHQ1NTY2QnY2In0.VAna5oViw_EpfBAhNpo-T7qlwe6IuYGj5n3j1DBGlkM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/movies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/movies/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoicGxheWxvYWQgbnVlc3RybyIsInVzZXJFbWFpbCI6Ikx1cXRUWnp2NWx0NTU2NkJ2NkBleGFtcGxlLmNvbSIsImlhdCI6MTY1Mzk5ODI1NSwiZXhwIjoxNjU0MDMyODE1LCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdC8iXSwiaXNzIjoiaHR0cDovL3BlcnNvbmFqZXNFRy5vcnQvIiwic3ViIjoiTHVxdFRaenY1bHQ1NTY2QnY2In0.VAna5oViw_EpfBAhNpo-T7qlwe6IuYGj5n3j1DBGlkM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/movies/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoicGxheWxvYWQgbnVlc3RybyIsInVzZXJFbWFpbCI6Ikx1cXRUWnp2NWx0NTU2NkJ2NkBleGFtcGxlLmNvbSIsImlhdCI6MTY1Mzk5ODI1NSwiZXhwIjoxNjU0MDMyODE1LCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdC8iXSwiaXNzIjoiaHR0cDovL3BlcnNvbmFqZXNFRy5vcnQvIiwic3ViIjoiTHVxdFRaenY1bHQ1NTY2QnY2In0.VAna5oViw_EpfBAhNpo-T7qlwe6IuYGj5n3j1DBGlkM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\":\"1\",\r\n    \"titulo\":\"1\",\r\n    \"fecha\":\"1\",\r\n    \"calificacion\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/movies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/movies/5",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoicGxheWxvYWQgbnVlc3RybyIsInVzZXJFbWFpbCI6Ikx1cXRUWnp2NWx0NTU2NkJ2NkBleGFtcGxlLmNvbSIsImlhdCI6MTY1Mzk5ODI1NSwiZXhwIjoxNjU0MDMyODE1LCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdC8iXSwiaXNzIjoiaHR0cDovL3BlcnNvbmFqZXNFRy5vcnQvIiwic3ViIjoiTHVxdFRaenY1bHQ1NTY2QnY2In0.VAna5oViw_EpfBAhNpo-T7qlwe6IuYGj5n3j1DBGlkM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\":\"1\",\r\n    \"titulo\":\"1\",\r\n    \"fecha\":\"1\",\r\n    \"calificacion\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/movies/5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/movies/5",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoicGxheWxvYWQgbnVlc3RybyIsInVzZXJFbWFpbCI6Ikx1cXRUWnp2NWx0NTU2NkJ2NkBleGFtcGxlLmNvbSIsImlhdCI6MTY1Mzk5ODI1NSwiZXhwIjoxNjU0MDMyODE1LCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdC8iXSwiaXNzIjoiaHR0cDovL3BlcnNvbmFqZXNFRy5vcnQvIiwic3ViIjoiTHVxdFRaenY1bHQ1NTY2QnY2In0.VAna5oViw_EpfBAhNpo-T7qlwe6IuYGj5n3j1DBGlkM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/movies/5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/movies?order=ASC&titulo=Hada por accidente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoicGxheWxvYWQgbnVlc3RybyIsInVzZXJFbWFpbCI6Ikx1cXRUWnp2NWx0NTU2NkJ2NkBleGFtcGxlLmNvbSIsImlhdCI6MTY1Mzk5ODI1NSwiZXhwIjoxNjU0MDMyODE1LCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdC8iXSwiaXNzIjoiaHR0cDovL3BlcnNvbmFqZXNFRy5vcnQvIiwic3ViIjoiTHVxdFRaenY1bHQ1NTY2QnY2In0.VAna5oViw_EpfBAhNpo-T7qlwe6IuYGj5n3j1DBGlkM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/movies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "DESC",
+							"disabled": true
+						},
+						{
+							"key": "Titulo",
+							"value": "Hada por accidente",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:5000'"
+		}
+	]
+}
