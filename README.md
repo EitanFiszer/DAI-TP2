@@ -1,0 +1,11 @@
+-Instalar Node.js versión 16.15.0 LTS
+-Ejecutar en Microsoft SQL en una nueva script el archivo llamado script
+-Instalar las dependencias en la terminal escribiendo NPM I
+-Crear un nuevo file llamado .env
+-Insertar el comentario en el .env
+-Cambiar la ubicación del servidor en el .env
+-Abrir Postman
+-Cargar el archivo Colleccion-postman
+-Modificar la variable URL en el postman y en el server
+-Ejecutar la request llamada autorizacion
+-Ejecutar las demas request utilizando el token en authorization/bearer token
