@@ -11,19 +11,46 @@ export class PersonajeService {
 
     getPersonaje = async (nombre,edad,id_movie,peso) => {
         console.log('This is a function on the service');
+        let where=false
         let response;
-        let solicitud=`SELECT distinct Nombre, Imagen, Id from ${personajeTabla} c, ${peliculaXpersonajeTabla} pp WHERE c.Id=pp.Id_personaje`;
+
+        let query=`SELECT distinct Nombre, Imagen, Id from ${personajeTabla} c `;
+        let query1=''
+
         if(nombre){
-            solicitud+=` and Nombre=@Nombre`;              
+            where=true;
+            query1+=`Nombre=@Nombre`;   
+
         }if(edad){
-            solicitud+=` and Edad=@Edad`;
-        }if(id_movie){
-            solicitud+=` and pp.Id_pelicula=@Id_movie `; 
+            if(where){
+                query1+=` and Edad=@Edad`;
+            }else{
+                where=true
+                query1+=` Edad=@Edad `
+            }
+
         }if(peso){
-            solicitud+=` and Peso=@Peso `;
+            if(where){
+            query1+=` and Peso=@Peso `;
+            }else{
+            where=true
+            query1+=` Peso=@Peso ` 
+            }
+        }if(id_movie && (nombre || edad || peso)){
+            query1= `, ${peliculaXpersonajeTabla} pp where c.Id=pp.Id_personaje and `+query1
+            query1+=` and pp.Id_pelicula=@Id_movie`
+        }else if(id_movie){
+            query1= `, ${peliculaXpersonajeTabla} pp where c.Id=pp.Id_personaje and pp.Id_pelicula=@Id_movie`
         }
 
-        response=await dbHelper(undefined, {nombre,edad,id_movie,peso}, solicitud)
+        if(where && !id_movie){
+            query+="WHERE " + query1
+        }else{
+            query+=query1
+        }
+
+        console.log(query)
+        response=await dbHelper(undefined, {nombre,edad,id_movie,peso}, query)
 
         return response.recordset;
     }

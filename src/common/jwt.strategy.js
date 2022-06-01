@@ -7,8 +7,7 @@ const opt = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
   issuer: `${process.env.AUTH_ISSUER_URL}`,
   algorithms: ["HS256"],
-  audience: `${process.env.AUTH_AUDIENCE_URL}`,
-  playload:`${process.env.AUTH_PLAYLOAD_URL}`,
+  audience: `${process.env.AUTH_AUDIENCE_URL}`
 };
 
 export const jwtStrategy = new Strategy(opt, (jwt_payload, done) => {

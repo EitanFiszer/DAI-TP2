@@ -1,22 +1,15 @@
 {
 	"info": {
-		"_postman_id": "ee1f4428-9b9c-4ed0-8d9d-85ce9661e1ba",
+		"_postman_id": "590b5d7f-b1b9-468e-9b7e-e18faa57a1f5",
 		"name": "DAI-TP2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "{{url}}/auth/logIn",
+			"name": "Autorizacion",
 			"request": {
 				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoicGxheWxvYWQgbnVlc3RybyIsInVzZXJFbWFpbCI6Ik9KVkR6a1BrUGlDeTNmakp3Y0BleGFtcGxlLmNvbSIsImlhdCI6MTY1Mzk5NzkzMywiZXhwIjoxNjU0MDMyNDkzLCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdC8iXSwiaXNzIjoiaHR0cDovL3BlcnNvbmFqZXNFRy5vcnQvIiwic3ViIjoiT0pWRHprUGtQaUN5M2ZqSndjIn0.-EP6ZpWyip6epTHi1Y9ho8kmIbtJgJ8bynJXxvAdqjM",
-							"type": "string"
-						}
-					]
+					"type": "noauth"
 				},
 				"method": "GET",
 				"header": [],
@@ -34,14 +27,14 @@
 			"response": []
 		},
 		{
-			"name": "{{url}}/characters",
+			"name": "GetallPersonaje",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoicGxheWxvYWQgbnVlc3RybyIsInVzZXJFbWFpbCI6Ik9KVkR6a1BrUGlDeTNmakp3Y0BleGFtcGxlLmNvbSIsImlhdCI6MTY1Mzk5NzkzMywiZXhwIjoxNjU0MDMyNDkzLCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdC8iXSwiaXNzIjoiaHR0cDovL3BlcnNvbmFqZXNFRy5vcnQvIiwic3ViIjoiT0pWRHprUGtQaUN5M2ZqSndjIn0.-EP6ZpWyip6epTHi1Y9ho8kmIbtJgJ8bynJXxvAdqjM",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjoicGxheWxvYWQgbnVlc3RybyIsInVzZXJFbWFpbCI6IlRpVDZYc3Y0YkVRU05nS1VIN0BleGFtcGxlLmNvbSIsImlhdCI6MTY1NDA4MTg0MSwiZXhwIjoxNjU0MTE2NDAxLCJhdWQiOlsiaHR0cDovL2xvY2FsaG9zdC8iXSwiaXNzIjoiaHR0cDovL3BlcnNvbmFqZXNFRy5vcnQvIiwic3ViIjoiVGlUNlhzdjRiRVFTTmdLVUg3In0.QYf4QxwxzsksnzRw4H_LBxwHnwz-NTMuMYWXhWEsEIE",
 							"type": "string"
 						}
 					]
@@ -61,7 +54,25 @@
 			"response": []
 		},
 		{
-			"name": "{{url}}/characters",
+			"name": "DetallePersonaje",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/characters/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"characters",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePersonaje",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -97,7 +108,7 @@
 			"response": []
 		},
 		{
-			"name": "{{url}}/characters/8",
+			"name": "UpdatePersonaje",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -134,7 +145,7 @@
 			"response": []
 		},
 		{
-			"name": "{{url}}/characters/8",
+			"name": "DeletePersonaje",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -162,7 +173,7 @@
 			"response": []
 		},
 		{
-			"name": "{{url}}/characters/1?nombre=Raúl",
+			"name": "SearchPersonaje",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -177,13 +188,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/characters/1",
+					"raw": "{{url}}/characters",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"characters",
-						"1"
+						"characters"
 					],
 					"query": [
 						{
@@ -192,8 +202,8 @@
 							"disabled": true
 						},
 						{
-							"key": "id",
-							"value": "1",
+							"key": "",
+							"value": "",
 							"disabled": true
 						},
 						{
@@ -217,7 +227,7 @@
 			"response": []
 		},
 		{
-			"name": "{{url}}/movies",
+			"name": "GetallPeliculas",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -244,7 +254,7 @@
 			"response": []
 		},
 		{
-			"name": "{{url}}/movies/1",
+			"name": "GetByIdMovie",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -272,7 +282,7 @@
 			"response": []
 		},
 		{
-			"name": "{{url}}/movies",
+			"name": "CreateMovie",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -308,7 +318,7 @@
 			"response": []
 		},
 		{
-			"name": "{{url}}/movies/5",
+			"name": "UpdateMovie",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -345,7 +355,7 @@
 			"response": []
 		},
 		{
-			"name": "{{url}}/movies/5",
+			"name": "DeleteMovie",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -373,7 +383,7 @@
 			"response": []
 		},
 		{
-			"name": "{{url}}/movies?order=ASC&titulo=Hada por accidente",
+			"name": "SearchMovie",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -412,10 +422,30 @@
 			"response": []
 		}
 	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
 			"key": "url",
-			"value": "localhost:5000'"
+			"value": "localhost:5000"
 		}
 	]
 }
