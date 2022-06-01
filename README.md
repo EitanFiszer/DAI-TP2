@@ -3,7 +3,7 @@
 3) Instalar las dependencias en la terminal escribiendo NPM I
 4) Crear un nuevo file llamado .env
 5) Insertar el comentario en el .env
-6) -Cambiar la ubicación del servidor en el .env
+6) Cambiar la ubicación del servidor en el .env
 7) Abrir Postman
 8) Cargar el archivo Colleccion-postman
 9) Modificar la variable URL en el postman y en el server
