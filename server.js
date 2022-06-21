@@ -5,6 +5,7 @@ import { jwtStrategy } from './src/common/jwt.strategy.js';
 import PersonajeRouter from "./src/controllers/personajeController.js";
 import AuthRouter from "./src/controllers/authController.js"
 import PeliculaRouter from "./src/controllers/peliculaController.js";
+import Axios from "axios"
 
 const app = express();
 const port = 5000;

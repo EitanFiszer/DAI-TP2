@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { PeliculaService } from '../services/peliculaService.js';
 import { Authenticate } from '../common/jwt.strategy.js';
+import  axios  from "axios"
 
 
 const router = Router();
